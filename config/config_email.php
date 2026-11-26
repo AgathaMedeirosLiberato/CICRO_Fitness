@@ -1,0 +1,23 @@
+<?php
+const EMAIL_MODO = 'arquivo';
+
+const SMTP_HOST   = 'smtp.gmail.com';
+const SMTP_PORTA  = 587;
+const SMTP_SEGURANCA = 'tls';
+const SMTP_USUARIO = '';
+const SMTP_SENHA   = '';
+
+const SMTP_VERIFICAR_CERTIFICADO = true;
+
+const EMAIL_MOSTRAR_LINK_NA_TELA = false;
+
+const EMAIL_REMETENTE_NOME  = 'CICRO';
+const EMAIL_REMETENTE_EMAIL = '';
+
+const SITE_URL = '';
+
+const VERIFICACAO_VALIDADE_HORAS = 24;
+const VERIFICACAO_REENVIO_SEGUNDOS = 60;
+
+const RECUPERACAO_VALIDADE_MINUTOS = 60;
+const RECUPERACAO_REENVIO_SEGUNDOS = 60;

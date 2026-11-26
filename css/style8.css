@@ -1,0 +1,64 @@
+:root { --ink:#111; --muted:#666; --line:#e2e2e2; --bg:#f5f5f5; --card:#fff; --accent:#7a1f3d; --ok:#1e6b34; --err:#a12622; }
+* { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+body { margin: 0; background: var(--bg); color: var(--ink); }
+.adm-page { max-width: 1100px; margin: 0 auto; padding: 24px 16px 60px; }
+.adm-topo { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+.adm-topo h1 { margin: 0; font-size: 1.6rem; }
+.adm-topo-acoes { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.btn { display: inline-block; padding: 9px 16px; border-radius: 8px; border: 1px solid transparent; cursor: pointer;
+       text-decoration: none; font-size: .9rem; font-weight: 600; line-height: 1.2; }
+.btn-escuro { background: var(--ink); color: #fff; }
+.btn-escuro:hover { background: #333; }
+.btn-claro { background: #fff; color: var(--ink); border-color: #ccc; }
+.btn-claro:hover { background: #eee; }
+.btn-perigo { background: #fff; color: var(--err); border-color: #e3b3b1; }
+.btn-perigo:hover { background: #fdecea; }
+
+.aviso { padding: 12px 16px; border-radius: 8px; margin-bottom: 14px; font-weight: 600; }
+.aviso-ok { background: #e6f4ea; color: var(--ok); }
+.aviso-erro { background: #fdecea; color: var(--err); }
+.vazio { color: var(--muted); padding: 12px 0; }
+
+.adm-filtros { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+.adm-filtros input[type=text] { flex: 1; min-width: 180px; }
+input[type=text], input[type=number], input[type=file], select, textarea {
+  padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-size: .95rem; background: #fff; width: 100%; }
+.adm-filtros select { width: auto; }
+
+.tabela-wrap { overflow-x: auto; background: var(--card); border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+.tabela { width: 100%; border-collapse: collapse; }
+.tabela th, .tabela td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: middle; }
+.tabela th { font-size: .78rem; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); }
+.tabela tr.inativo td { opacity: .6; }
+.tabela .mini { width: 48px; height: 58px; object-fit: cover; border-radius: 6px; background: #eee; display: block; }
+.acoes { white-space: nowrap; }
+.acoes .btn { margin-right: 4px; padding: 7px 12px; }
+form.inline { display: inline; }
+.badge { padding: 3px 10px; border-radius: 20px; font-size: .75rem; font-weight: 700; }
+.badge-ok { background: #e6f4ea; color: var(--ok); }
+.badge-off { background: #eee; color: var(--muted); }
+
+.cartao { background: var(--card); border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+.cartao h2 { font-size: 1.05rem; margin: 26px 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--ink); }
+.cartao h2:first-of-type { margin-top: 0; }
+.linha { display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-end; }
+.campo { display: flex; flex-direction: column; gap: 6px; font-size: .85rem; font-weight: 600; color: #444; margin-bottom: 14px; flex: 1; min-width: 160px; }
+.campo.grande { flex: 3; min-width: 240px; }
+.campo.check { flex-direction: row; align-items: center; gap: 8px; padding-bottom: 12px; }
+.campo.check input { width: 18px; height: 18px; }
+.campo.inline { flex-direction: row; align-items: center; margin: 0; flex: 0; white-space: nowrap; }
+.tabela.compacta { max-width: 520px; }
+.tabela.compacta th, .tabela.compacta td { padding: 8px 12px; }
+input.num { width: 90px; }
+.novos-tamanhos { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 14px; }
+.pill { border: 1px solid #ccc; border-radius: 20px; padding: 6px 14px; cursor: pointer; font-weight: 600; font-size: .85rem; }
+.fotos { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 14px; }
+.foto { width: 130px; text-align: center; font-size: .8rem; }
+.foto img { width: 130px; height: 160px; object-fit: cover; border-radius: 8px; background: #eee; display: block; margin-bottom: 6px; }
+.foto label { display: block; cursor: pointer; }
+.foto .rm { color: var(--err); }
+.cor-campo { display: flex; flex-direction: column; gap: 6px; margin: 6px 0; }
+.cor-campo select, .cor-campo input { padding: 7px; font-size: .85rem; }
+.cor-campo input[hidden] { display: none; }
+.rodape-form { display: flex; justify-content: flex-end; gap: 10px; margin-top: 28px; }

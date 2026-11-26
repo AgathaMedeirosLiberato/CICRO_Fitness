@@ -1,0 +1,235 @@
+.section-sub {
+  text-align: center;
+  color: #666;
+  margin: -10px 0 25px;
+  font-size: 0.95rem;
+}
+
+.banners {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px 0;
+}
+
+.banners-fim {
+  padding-bottom: 10px;
+}
+
+.banner-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 14 / 5;
+  background-color: #e9e9ee;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.banner-slide {
+  position: absolute;
+  inset: 0;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s;
+}
+
+.banner-slide.ativo {
+  opacity: 1;
+  visibility: visible;
+}
+
+.banner-slide img,
+.banner-promo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-vazio {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 16px;
+  text-align: center;
+  color: #555;
+  background: repeating-linear-gradient(45deg, #ececf1, #ececf1 14px, #e3e3ea 14px, #e3e3ea 28px);
+  border: 2px dashed #b9b9c6;
+  border-radius: inherit;
+}
+
+.banner-vazio strong {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.banner-vazio span {
+  font-weight: bold;
+}
+
+.banner-vazio small {
+  font-size: 0.78rem;
+  color: #777;
+}
+
+.banner-seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(17, 17, 17, 0.7);
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 5;
+  transition: 0.2s;
+}
+
+.banner-seta:hover {
+  background-color: #111;
+}
+
+.banner-seta.esquerda {
+  left: 12px;
+}
+
+.banner-seta.direita {
+  right: 12px;
+}
+
+.banner-pontos {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 5;
+}
+
+.banner-ponto {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.banner-ponto.ativo {
+  background-color: #ffffff;
+  transform: scale(1.2);
+}
+
+.banner-slider.unico .banner-seta,
+.banner-slider.unico .banner-pontos {
+  display: none;
+}
+
+.faixa-vendidos {
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-top: 20px;
+}
+
+.grid-vendidos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 20px;
+}
+
+.grid-vendidos .card-produto {
+  flex: none;
+}
+
+.grid-vendidos .img-wrapper {
+  position: relative;
+  height: 240px;
+}
+
+.selo-rank {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  padding: 5px 10px;
+  border-radius: 99px;
+  background-color: #111;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.vendidas {
+  font-size: 0.82rem;
+  color: #777;
+}
+
+.banners-promo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.banner-promo {
+  display: block;
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #e9e9ee;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+}
+
+.banner-promo:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .banners {
+    padding: 20px 12px 0;
+  }
+
+  .banner-slider {
+    aspect-ratio: 16 / 9;
+  }
+
+  .banner-seta {
+    width: 30px;
+    height: 30px;
+  }
+
+  .banner-vazio small {
+    display: none;
+  }
+
+  .banners-promo {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-vendidos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .grid-vendidos .img-wrapper {
+    height: 170px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner-slide,
+  .banner-promo {
+    transition: none;
+  }
+}

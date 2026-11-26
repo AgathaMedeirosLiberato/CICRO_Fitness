@@ -1,0 +1,77 @@
+
+.vd-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-bottom:24px}
+.vd-kpi{background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:18px 20px;box-shadow:0 4px 12px rgba(0,0,0,.03)}
+.vd-kpi__valor{display:block;font-size:1.6rem;font-weight:800;color:#111;line-height:1.2}
+.vd-kpi__rotulo{display:block;margin-top:4px;font-size:.8rem;color:#666}
+.vd-kpi--alerta .vd-kpi__valor{color:#a12622}
+
+.vd-filtros{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;margin-bottom:20px}
+.vd-filtros label{display:flex;flex-direction:column;gap:4px;font-size:.75rem;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:.04em}
+.vd-filtros input,.vd-filtros select{padding:9px 12px;border:1px solid #ccc;border-radius:8px;font-size:.9rem;background:#fff;min-width:140px}
+.vd-btn{display:inline-block;padding:10px 20px;border:1px solid #111;border-radius:99px;background:#111;color:#fff;font-weight:700;font-size:.85rem;cursor:pointer;text-decoration:none;font-family:inherit}
+.vd-btn:hover{background:#333}
+.vd-btn:disabled{opacity:.35;cursor:not-allowed}
+.vd-btn--claro{background:#fff;color:#111}
+.vd-btn--claro:hover{background:#f0f0f0}
+.vd-btn--pequeno{padding:6px 14px;font-size:.78rem}
+
+.vd-status{display:inline-block;padding:3px 11px;border-radius:99px;font-size:.74rem;font-weight:700;white-space:nowrap}
+.st-pendente{background:#fff4d6;color:#8a5a00}
+.st-pago{background:#e0efff;color:#0b4f9c}
+.st-empreparacao{background:#ffe9d6;color:#9a4a00}
+.st-enviado{background:#ece6ff;color:#4a2fa0}
+.st-entregue{background:#e6f4ea;color:#1e6b34}
+.st-cancelado{background:#fdecea;color:#a12622}
+
+.vd-tabela td,.vd-tabela th{white-space:nowrap}
+.vd-tabela .vd-num{text-align:right}
+.vd-link{color:#111;font-weight:700;text-decoration:underline}
+.vd-muted{color:#777;font-size:.82rem}
+.vd-form-status{display:flex;gap:6px;align-items:center}
+.vd-acoes-status{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.vd-form-status select{padding:5px 8px;border:1px solid #ccc;border-radius:8px;font-size:.8rem}
+
+.vd-detalhe{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:20px}
+.vd-bloco{background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:18px 20px}
+.vd-bloco h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#666;margin-bottom:8px}
+.vd-bloco p{margin:2px 0;font-size:.92rem;color:#222}
+
+.vd-pedido{background:#fff;border:1px solid #e0e0e0;border-radius:12px;margin-bottom:16px;overflow:hidden}
+.vd-pedido__topo{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;justify-content:space-between;padding:14px 20px;background:#fafafa;border-bottom:1px solid #eee}
+.vd-pedido__topo strong{font-size:1rem}
+.vd-pedido__corpo{padding:6px 20px 14px}
+.vd-pedido table{width:100%;border-collapse:collapse;font-size:.9rem}
+.vd-pedido th{text-align:left;font-size:.72rem;text-transform:uppercase;color:#777;padding:8px 4px;border-bottom:1px solid #eee}
+.vd-pedido td{padding:8px 4px;border-bottom:1px solid #f2f2f2}
+.vd-pedido td.vd-num,.vd-pedido th.vd-num{text-align:right}
+.vd-pedido__rodape{margin-top:10px;font-size:.85rem;color:#444}
+
+.vd-graficos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:24px}
+.vd-grafico{background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:18px 20px}
+.vd-grafico--largo{grid-column:1 / -1}
+.vd-grafico h3{font-size:.95rem;margin-bottom:12px;color:#111}
+.vd-grafico__area{position:relative;height:280px}
+.vd-grafico--largo .vd-grafico__area{height:320px}
+.vd-vazio-grafico{display:grid;place-items:center;height:100%;color:#888;font-size:.9rem}
+
+.vd-secao{margin-bottom:24px}
+.vd-secao h2{font-size:1.05rem;margin-bottom:10px;color:#111}
+.vd-secoes-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.vd-mini{width:100%;border-collapse:collapse;font-size:.88rem;background:#fff;border:1px solid #e0e0e0;border-radius:12px;overflow:hidden}
+.vd-mini th{background:#fafafa;text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#666;padding:10px 12px}
+.vd-mini td{padding:10px 12px;border-top:1px solid #f0f0f0}
+.vd-mini .vd-num{text-align:right}
+
+.vd-aviso-topo{margin-bottom:14px}
+.vd-barra-acoes{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+
+@media (max-width:860px){
+  .vd-graficos,.vd-secoes-2{grid-template-columns:1fr}
+}
+
+@media print{
+  header.site-header,.vd-filtros,.vd-barra-acoes,.no-print,.vd-form-status{display:none !important}
+  body{background:#fff}
+  .dashboard-container{padding:0}
+  .vd-kpi,.vd-grafico,.vd-bloco,.vd-pedido{box-shadow:none;break-inside:avoid}
+}

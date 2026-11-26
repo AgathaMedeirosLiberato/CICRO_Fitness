@@ -1,0 +1,9 @@
+{
+  "name": "cicro/loja",
+  "description": "CICRO - loja online (Pix por biblioteca PHP)",
+  "type": "project",
+  "require": {
+    "php": "^8.0",
+    "piggly/php-pix": "2.0.2"
+  }
+}
